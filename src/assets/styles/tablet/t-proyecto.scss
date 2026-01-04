@@ -1,0 +1,30 @@
+@media (max-width: 1024px) and (min-width: 768px) {
+
+    .proyecto-header {
+        flex-direction: column;
+
+        .nombre-proyecto {
+            margin-bottom: 1px;
+            padding: 1px 0;
+            max-width: unset;
+
+            .icon {
+                svg {
+                    transform: scale(0.8);
+                }
+                
+                &:hover {
+                    svg {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+
+        .generar-idea {
+            margin-top: 0;
+            padding: 1px 0;
+            font-size: 1em;
+        }
+    }
+}

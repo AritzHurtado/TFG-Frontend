@@ -1,0 +1,69 @@
+.forms {
+    background-color: #161616;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.05s linear;
+
+    .components {
+        color: #fff;
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        height: min-content;
+        max-height: 88%;
+        overflow-y: auto;
+
+        margin: 20px 0;
+
+        scrollbar-width: thin;
+        scrollbar-color: #fff #0000;
+
+        .component {
+            display: flex;
+            flex-direction: column;
+            margin: 12px auto;
+            width: 80%;
+
+            textarea {
+                resize: vertical;
+            }
+
+            * {
+                outline-color: #161616;
+            }
+        }
+
+    }
+
+    .submit {
+        margin: auto auto 0 auto;
+        display: flex;
+        height: 12%;
+        width: 60%;
+
+        button {
+            margin: auto;
+
+            width: 100%;
+
+            background-color: var(--principal);
+            color: #fff;
+            border: none;
+            outline: none;
+            padding: 6px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+            color: #fff;
+            transition: transform 0.3s var(--easeOutBack);
+            font-weight: bold;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

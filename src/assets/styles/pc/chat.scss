@@ -1,0 +1,184 @@
+.chat {
+    height: 100%;
+    background: #fff;
+    position: relative;
+    overflow-x: hidden;
+    transition: width 0.05s linear;
+
+    .mensajes {
+        overflow-y: auto;
+        margin: 0 2px;
+
+        scrollbar-width: thin;
+        scrollbar-color: var(--principal) transparent;
+        transition: height 0.2s;
+
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+
+        .mensaje {
+            border-radius: 21px;
+            width: fit-content;
+            max-width: 80%;
+            padding: 0 20px;
+            margin: 12px;
+
+
+            &.mensaje-IA {
+                color: #fff;
+                background: var(--principal);
+                box-shadow: 0 4px 4px #0003;
+                display: flex;
+                flex-direction: column;
+            }
+
+            &.mensaje-USER {
+                color: #000;
+                background: #ff99cc;
+                box-shadow: 0 4px 4px #0003;
+                margin-left: auto;
+                display: flex;
+                position: relative;
+            }
+
+            ul,
+            ol {
+                padding-left: 24px;
+                margin: 0;
+            }
+
+            li {
+                margin: 16px 0;
+            }
+
+            .icon {
+                margin: auto 0 auto 12px;
+                cursor: pointer;
+                display: flex;
+
+                &:hover {
+                    svg {
+                        transform: scale(1.2);
+                    }
+                }
+
+                svg {
+                    margin: auto;
+                    transition: transform 0.3s var(--easeOutBack);
+                }
+
+            }
+
+            .generar-idea-mensaje {
+                margin: 2px auto 16px;
+
+                width: 100%;
+
+                background-color: var(--principal);
+                color: #fff;
+                border: none;
+                outline: none;
+                padding: 6px 16px;
+                border-radius: 4px;
+                cursor: pointer;
+                position: relative;
+                color: #fff;
+                transition: background-color 0.3s var(--easeOutBack), color 0.3s var(--easeOutBack);
+                font-weight: bold;
+
+                &:hover {
+                    background-color: #fff;
+                    color: var(--principal);
+                }
+            }
+        }
+    }
+
+    .input-user {
+        box-shadow: 0 -6px 6px #0004;
+        background: #0002;
+        padding: 12px;
+        transition: height 0.2s;
+        position: relative;
+        display: flex;
+
+        .loading-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            color: #fff;
+            background-color: #000c;
+            z-index: 2;
+        }
+
+        textarea {
+            display: block;
+            width: calc(100% - 64px - 12px);
+            height: 100%;
+            resize: none;
+            overflow: hidden;
+            padding: 0.5em 0.75em;
+            font-family: inherit;
+            font-size: 1rem;
+            border: 2px solid #000;
+            background-color: #fff;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            line-height: 1.5;
+            color: #000;
+
+            &:focus {
+                border-color: var(--principal);
+                box-shadow: 0 4px 4px #0003;
+            }
+
+            &::placeholder {
+                color: #666;
+            }
+        }
+
+        .chat-send {
+            width: 44px;
+            height: 44px;
+            margin: auto;
+            background-color: var(--principal);
+            border-radius: 100px;
+            display: flex;
+            transition: transform 0.3s var(--easeOutBack), filter 0.3s ease;
+            box-shadow: 0 4px 4px #0003;
+
+            &:not(.disabled) {
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+
+            &.disabled {
+                filter: brightness(0.5);
+            }
+
+            svg {
+                margin: auto;
+                transform: translateX(-3px);
+            }
+
+            z-index: 1;
+        }
+
+        small {
+            color: var(--principal);
+            position: absolute;
+            right: 18px;
+            bottom: 16px;
+            padding: 2px 6px;
+            background-color: #fffc;
+            border-radius: 20px;
+        }
+    }
+}

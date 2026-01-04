@@ -1,0 +1,176 @@
+// PC
+@use "./pc/header.scss";
+@use "./pc/proyectoCard.scss";
+@use "./pc/welcome.scss";
+@use "./pc/login.scss";
+@use "./pc/perfil.scss";
+@use "./pc/proyectos.scss";
+@use "./pc/nuevoProyecto.scss";
+@use "./pc/proyecto.scss";
+@use "./pc/chat.scss";
+@use "./pc/forms.scss";
+
+// Tablet
+@use "./tablet/t-welcome.scss";
+@use "./tablet/t-perfil.scss";
+@use "./tablet/t-nuevoProyecto.scss";
+@use "./tablet/t-proyecto.scss";
+
+
+// Movil
+@use "./movil/m-proyectoCard.scss";
+@use "./movil/m-welcome.scss";
+@use "./movil/m-login.scss";
+@use "./movil/m-perfil.scss";
+@use "./movil/m-nuevoProyecto.scss";
+@use "./movil/m-proyecto.scss";
+@use "./movil/m-chat.scss";
+@use "./movil/m-forms.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+@import "@mantine/core/styles.css";
+@import "@mantine/notifications/styles.css";
+
+:root {
+    --header-height: 80px;
+    --principal: #BE3455;
+    --easeOutBack: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    scrollbar-width: thin;
+    scrollbar-color: #fff var(--principal);
+}
+
+body {
+    background-color: #fff;
+}
+
+.page {
+    margin-top: var(--header-height);
+    height: calc(100vh - var(--header-height));
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: #fff var(--principal);
+}
+
+a {
+    color: var(--principal) !important;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: var(--principal);
+        width: 0;
+        height: 1px;
+        bottom: 0;
+        right: -4px;
+        transition: width 0.3s ease;
+    }
+
+    &:hover {
+        &::after {
+            width: calc(100% + 8px);
+            left: -4px;
+        }
+    }
+}
+
+.loading {
+    display: flex;
+    margin: auto;
+
+    svg {
+        margin: auto;
+        animation: loading 3s infinite linear;
+
+        @keyframes loading {
+            from {
+                rotate: 0;
+            }
+
+            to {
+                rotate: 360deg;
+            }
+        }
+    }
+}
+
+.mantine-Modal-content {
+    background-color: var(--principal);
+    color: #fff;
+}
+
+.mantine-Modal-header {
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+
+    h2 {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+}
+
+.mantine-CloseButton-root {
+    transition: background-color 0.3s ease;
+
+    path {
+        transition: fill 0.3s ease;
+        fill: #fff
+    }
+
+    &:hover {
+        background-color: #fff;
+
+        path {
+            fill: var(--principal)
+        }
+    }
+}
+
+.mantine-Modal-body {
+    text-align: center;
+
+        @media (max-width: 767px) {
+            margin-top: 50px;;
+        }
+
+    .acciones {
+        display: flex;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+
+        button {
+            width: 100%;
+
+            background-color: #fff;
+            color: var(--principal) !important;
+            border: none;
+            outline: none;
+            padding: 6px 16px;
+            margin: auto 2px -16px;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+            color: #fff;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-weight: bold;
+            width: 100%;
+            margin-bottom: 12px;
+
+            &:hover {
+                background-color: #ddd;
+            }
+
+        }
+    }
+}

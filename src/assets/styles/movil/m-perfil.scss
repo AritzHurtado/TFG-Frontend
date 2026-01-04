@@ -1,0 +1,157 @@
+@media (max-width: 767px) {
+    .perfil-page {
+        margin: 0 24px;
+
+        h1 {
+            color: var(--principal);
+            padding-left: 24px;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: var(--principal);
+                width: 100%;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+
+        .perfil-editar {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+
+            form {
+                width: calc(33% - 4em);
+                min-width: 360px;
+
+                margin: 2em;
+                padding: 2em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                box-shadow: 0 4px 4px #0003;
+
+                background-color: var(--principal);
+                border-radius: 16px;
+
+
+                label {
+                    color: #fff;
+                    text-align: center;
+                    font-size: 1.5em;
+                    margin: -16px 0 0;
+                    position: relative;
+                    width: 100%;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        background-color: #fff;
+                        width: 104%;
+                        height: 1px;
+                        bottom: -8px;
+                        left: -2%;
+                    }
+                }
+
+                .opciones {
+                    padding: 16px;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    margin: auto;
+
+                    small {
+                        color: #fff;
+                        text-align: center;
+                    }
+                }
+
+                input {
+                    background: #fff;
+                    border: none;
+                    outline: none;
+                    padding: 6px 16px;
+                    margin: 2px;
+                    border-radius: 8px;
+                    box-shadow: inset 0 0 2px var(--principal);
+                }
+
+                button {
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    padding: 6px 16px;
+                    margin: auto 2px -16px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    position: relative;
+                    color: #fff;
+                    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+                    font-weight: bold;
+                    width: 100%;
+
+                    &:hover {
+                        color: var(--principal);
+                        background-color: #fff;
+                        box-shadow: 0 4px 4px #0003;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        background-color: #fff;
+                        width: 104%;
+                        height: 1px;
+                        top: -8px;
+                        left: -2%;
+                    }
+                }
+            }
+        }
+
+        .proyectos {
+
+            h1 {
+                .todos-proyectos {
+                    font-size: x-large;
+                    position: absolute;
+                    right: 24px;
+                    width: 140px;
+                    top: 4px;
+                    height: calc(100% - 8px);
+                    display: flex;
+
+                    background-color: #fff;
+                    color: var(--principal);
+                    cursor: pointer;
+                    border-radius: 12px;
+                    transition: background-color 0.3s ease, color 0.3s ease;
+
+                    span {
+                        margin: auto;
+                    }
+
+                    &:hover {
+                        background-color: var(--principal);
+                        color: #fff;
+                    }
+                }
+            }
+
+            .proyectos-list {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                overflow-y: hidden;
+                gap: 6px;
+                padding: 8px 6px;
+            }
+        }
+    }
+}

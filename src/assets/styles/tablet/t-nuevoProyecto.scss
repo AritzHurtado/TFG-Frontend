@@ -1,0 +1,21 @@
+@media (max-width: 1024px) and (min-width: 768px) {
+    .nuevo-proyecto {
+        display: flex;
+        width: calc(95% - 238px);
+
+        form {
+            width: 90%;
+        }
+
+        .preview {
+            width: 280px;
+            scale: 0.85;
+            right: 0;
+        }
+
+        .acciones {
+            width: 238px;
+            right: 20px;
+        }
+    }
+}

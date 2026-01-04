@@ -1,0 +1,57 @@
+@media (max-width: 1024px) and (min-width: 768px) {
+    .hero {
+        h1 {
+            font-size: 6em;
+        }
+
+        small {
+            font-size: 1.2em;
+        }
+
+        .hero-left {
+            h1 {
+                margin-right: 40px;
+            }
+
+            small {
+                margin-right: 60px;
+            }
+        }
+
+        .hero-right {
+            h1 {
+                margin-left: 40px;
+            }
+
+            small {
+                margin-left: 60px;
+            }
+        }
+    }
+
+    // CONTENIDO
+
+    .content {
+
+        .about>div {
+            flex-direction: column;
+
+            .gemini-logo {
+                margin: auto;
+            }
+        }
+
+        .funcionalidades {
+
+            .funcionalidades-proyectos-grid {
+                display: none;
+            }
+
+            .funcionalidades-text {
+                width: 100%;
+            }
+
+        }
+
+    }
+}

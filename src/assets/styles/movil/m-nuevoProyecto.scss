@@ -1,0 +1,79 @@
+@media (max-width: 767px) {
+    .nuevo-proyecto {
+        width: 100%;
+        flex-direction: column;
+
+        .font-head {
+            flex-direction: column;
+        }
+
+        form {
+            width: 90%;
+            height: 60vh;
+            margin: 0 auto;
+            padding: 40px 0;
+            overflow-y: auto;
+
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            section {
+                .selector-color {
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: 8px;
+                    margin: 20px 0;
+
+                    label {
+                        .proyecto-card {
+                            transform: none;
+                            scale: 1;
+                            height: 70px;
+                            margin: 0px !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .preview {
+            width: 100%;
+            height: calc(40vh - var(--header-height));
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            right: unset;
+            top: unset;
+            transform: unset;
+
+            .proyecto-card {
+                margin: auto auto auto auto !important;
+            }
+
+            box-shadow: 0 0 10px #0006;
+
+            >span {
+                position: absolute;
+                bottom: 32px;
+                width: 100%;
+            }
+        }
+
+        .acciones {
+            width: 100%;
+            position: absolute;
+            right: unset;
+            bottom: unset;
+
+            bottom: calc(40vh - var(--header-height));
+            transform: translateY(calc(100% + 6px));
+
+            button {
+                width: 90%;
+            }
+        }
+    }
+}

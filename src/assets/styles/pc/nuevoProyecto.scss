@@ -1,0 +1,204 @@
+.nuevo-proyecto {
+    display: flex;
+    width: calc(90% - 280px);
+
+    h2 {
+        color: var(--principal);
+        margin: auto 20px;
+    }
+
+
+    .font-head {
+        display: flex;
+        margin-bottom: 12px;
+
+        .radial-option {
+            margin: auto 20px 0 auto;
+            padding: 12px;
+
+            cursor: pointer;
+
+            label {
+                margin-right: 16px;
+            }
+
+            * {
+                pointer-events: none;
+            }
+        }
+    }
+
+    form {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 40px auto;
+
+        section {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 20px 0;
+
+            input[type=text] {
+                width: 100%;
+                margin: auto;
+                background: #fff;
+                border: 2px solid #333;
+                outline: none;
+                padding: 6px 16px;
+                border-radius: 8px;
+                transition: border 0.3s ease;
+
+                &:hover,
+                &:focus {
+                    border: 2px solid var(--principal);
+                }
+            }
+
+            .font-size {
+                width: 100%;
+                margin: auto;
+            }
+
+            .selector-color {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                gap: 2px;
+                margin: auto;
+
+                input {
+                    display: none;
+
+                    &:checked {
+                        +label {
+                            .proyecto-card {
+                                transform: scale(1) !important;
+                            }
+                        }
+                    }
+                }
+
+                label {
+                    .proyecto-card {
+                        transform: scale(0.9);
+                        border-radius: 12px;
+
+                        &:hover {
+                            transform: scale(0.93);
+                        }
+                    }
+                }
+            }
+
+            .opciones-icono {
+                transition: filter 0.3s ease;
+                background-color: var(--principal);
+                color: #fff;
+                border-radius: 16px;
+                padding: 16px 32px 28px;
+                display: flex;
+                flex-direction: column;
+
+                h3 {
+                    margin: 16px 12px 4px;
+                }
+
+                button {
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    padding: 6px 16px;
+                    margin: auto 2px -16px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    position: relative;
+                    color: #fff;
+                    transition: background-color 0.3s ease, color 0.3s ease;
+                    font-weight: bold;
+                    width: 100%;
+                    margin-bottom: 12px;
+
+                    &:hover {
+                        color: var(--principal);
+                        background-color: #fff;
+                    }
+
+                }
+            }
+
+        }
+    }
+
+    .preview {
+        width: 280px;
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+
+        .proyecto-card {
+            margin: auto;
+        }
+
+        >span {
+            text-align: center;
+            margin-top: 12px;
+            animation: flotar 3s infinite ease-in-out;
+
+            @keyframes flotar {
+                0% {
+                    transform: translateY(100%);
+                }
+
+                50% {
+                    transform: translateY(50%);
+                }
+
+                100% {
+                    transform: translateY(100%);
+                }
+            }
+        }
+    }
+
+    .acciones {
+        width: 280px;
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        right: 5%;
+        bottom: 5%;
+
+        button {
+            margin: auto;
+
+            width: 100%;
+
+            background-color: var(--principal);
+            color: #fff;
+            border: none;
+            outline: none;
+            padding: 6px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+            color: #fff;
+            transition: transform 0.3s var(--easeOutBack);
+            font-weight: bold;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.mantine-Combobox-dropdown {
+    height: 200px;
+    overflow-y: auto;
+}

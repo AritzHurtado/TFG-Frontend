@@ -1,0 +1,8 @@
+@media (max-width: 767px) {
+    .chat {
+        textarea {
+            margin-left: 76px;
+            width: calc(100% - 64px - 12px - 76px) !important;
+        }
+    }
+}

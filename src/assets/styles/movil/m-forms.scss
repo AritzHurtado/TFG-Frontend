@@ -1,0 +1,10 @@
+@media (max-width: 767px) {
+    .forms {
+        .submit {
+            margin: auto 32px 0 auto;
+            display: flex;
+            height: 12%;
+            width: calc(100% - 140px);
+        }
+    }
+}

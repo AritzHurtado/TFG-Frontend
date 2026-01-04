@@ -1,0 +1,73 @@
+@media (max-width: 767px) {
+
+    .hero {
+        flex-direction: column;
+
+        h1 {
+            font-size: 4em;
+            display: flex;
+            margin: auto;
+            margin-bottom: 0;
+        }
+
+        small {
+            display: none;
+        }
+
+        .hero-left {
+            width: 100%;
+            height: 50vh;
+            background: #fff;
+            color: var(--principal);
+
+            h1 {
+                margin: auto auto 6px auto;
+            }
+        }
+
+        .hero-right {
+            width: 100%;
+            height: 50vh;
+            background: var(--principal);
+            color: #fff;
+
+            h1 {
+                margin: 6px auto;
+            }
+        }
+    }
+
+    // CONTENIDO
+
+    .content {
+        font-size: 1.1em;
+
+        .about {
+            .about-content {
+                flex-direction: column;
+            }
+
+            .gemini-logo {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .funcionalidades {
+
+            .funcionalidades-proyectos-grid {
+                display: none;
+            }
+
+            .funcionalidades-text {
+                width: 90%;
+            }
+
+            button {
+                font-size: 1.3em;
+            }
+        }
+
+    }
+}
